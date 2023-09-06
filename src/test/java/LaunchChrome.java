@@ -1,14 +1,12 @@
 import io.appium.java_client.AppiumDriver;
 //import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.net.URL;
 
-public class webAppDemo {
+public class LaunchChrome {
     public static void main(String[] args) {
         // Set the desired capabilities for the Android emulator
         String chromeDriver = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"chromedriver.exe";

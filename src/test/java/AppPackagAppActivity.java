@@ -7,7 +7,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class StartDriverSession {
+public class AppPackagAppActivity {
 
 
     public static void main(String[] args) throws MalformedURLException {
