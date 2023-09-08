@@ -18,8 +18,12 @@ public class AppPackagAppActivity {
         caps.setCapability(MobileCapabilityType.DEVICE_NAME,"pixel_7_pro");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
         caps.setCapability(MobileCapabilityType.UDID,"emulator-5554");
+        caps.setCapability("avd","Pixel_7_Pro");
+        caps.setCapability("avdLaunchTimeout",180000);
+        caps.setCapability("readyTimeout",180000);
         String appUrl = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ApiDemos-debug.apk";
         //caps.setCapability(MobileCapabilityType.APP,appUrl);
+
         caps.setCapability("appPackage","io.appium.android.apis");
         caps.setCapability("appActivity","io.appium.android.apis.accessibility.CustomViewAccessibilityActivity");
 
