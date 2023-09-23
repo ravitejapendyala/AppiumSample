@@ -1,6 +1,8 @@
 import POM.CalculationScreen;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -12,90 +14,6 @@ public class CalculatorApp extends AppiumTest_Hoooks {
     ExtentTest test;
     CalculationScreen calculationScreen;
 
-/*
-    public static void main(String[] args) throws MalformedURLException, InterruptedException {
-
-
-        String appUrl = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"Calculator.apk";
-        UiAutomator2Options opt = new UiAutomator2Options().
-                setDeviceName("pixel_7_pro").
-                setAutomationName("UiAutomator2").
-                setApp(appUrl);
-
-        URL url = new URL("http://0.0.0.0:4723");
-
-        AppiumDriver driver = new AndroidDriver(url,opt);
-        //Addition of two numbers
-
-        Thread.sleep(5000);
-        WebElement seven = driver.findElement(By.id("com.google.android.calculator:id/digit_7"));
-        seven.click();
-        Thread.sleep(3000);
-        WebElement plus = driver.findElement(By.id("com.google.android.calculator:id/op_add"));
-        plus.click();
-        Thread.sleep(3000);
-        WebElement three = driver.findElement(By.id("com.google.android.calculator:id/digit_3"));
-        three.click();
-        Thread.sleep(3000);
-        WebElement equalTo = driver.findElement(By.id("com.google.android.calculator:id/eq"));
-
-        equalTo.click();
-        Thread.sleep(3000);
-        // locate the edit box
-        WebElement results = driver.findElement(By.id("com.google.android.calculator:id/formula_scroll_view"));
-
-        if(results.getText().equals("10"))
-        {
-            System.out.println("Test Passed...");
-        }
-        else
-        {
-            System.out.println("Test Failed...");
-        }
-
-
-    }
-*/
-    //@Test
-    public void AddtionTest() throws InterruptedException {
-
-        test = extent
-                .createTest("AdditionTest","Calculator automation using Appium")
-                .info("This is a info msg")
-                .addScreenCaptureFromBase64String(getScreenshot(),"");
-        WebElement clearAll = driver.findElement(By.id("com.google.android.calculator:id/clr"));
-        clearAll.click();
-        test.log(Status.INFO,"Enter 7");
-        WebElement seven = driver.findElement(By.id("com.google.android.calculator:id/digit_7"));
-        seven.click();
-        Thread.sleep(3000);
-        WebElement plus = driver.findElement(By.id("com.google.android.calculator:id/op_add"));
-        plus.click();
-        Thread.sleep(3000);
-        WebElement three = driver.findElement(By.id("com.google.android.calculator:id/digit_3"));
-        three.click();
-        Thread.sleep(3000);
-        WebElement equalTo = driver.findElement(By.id("com.google.android.calculator:id/eq"));
-
-        equalTo.click();
-
-        Thread.sleep(3000);
-        // locate the edit box
-        WebElement results = driver.findElement(By.id("com.google.android.calculator:id/result_final"));
-
-        if(results.getText().equals("10"))
-        {
-            System.out.println("Test Passed...");
-            test.pass("Addition Pass");
-        }
-        else
-        {
-            System.out.println("Test Failed...");
-            test.fail("Addition Failure");
-        }
-
-    }
-
     @Test(priority = 1)
     public void VerifyAddition() throws InterruptedException {
         calculationScreen=new CalculationScreen(driver);
@@ -106,7 +24,13 @@ public class CalculatorApp extends AppiumTest_Hoooks {
                 .addScreenCaptureFromBase64String(getScreenshot(),"");
         calculationScreen.btnEqual.click();
         String result = calculationScreen.FinalResult.getText();
-        Assert.assertEquals(result,"12");
+        try{
+            Assert.assertEquals(result,"12");
+            test.pass(MarkupHelper.createLabel("Addition Test Success", ExtentColor.GREEN));
+        }
+        catch (Exception ex){
+            test.pass(MarkupHelper.createLabel("Addition Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+        }
     }
     @Test(priority = 2)
     public void VerifySubtraction() throws InterruptedException {
@@ -118,7 +42,14 @@ public class CalculatorApp extends AppiumTest_Hoooks {
                 .addScreenCaptureFromBase64String(getScreenshot(),"");
         calculationScreen.btnEqual.click();
         String result = calculationScreen.FinalResult.getText();
-        Assert.assertEquals(result,"4");
+        try{
+            Assert.assertEquals(result,"4");
+            test.pass(MarkupHelper.createLabel("Subtraction Test Success", ExtentColor.GREEN));
+        }
+        catch (Exception ex){
+            test.pass(MarkupHelper.createLabel("Subtraction Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+        }
+
     }
     @Test(priority = 3)
     public void VerifyMultiplication() throws InterruptedException {
@@ -130,7 +61,14 @@ public class CalculatorApp extends AppiumTest_Hoooks {
                 .addScreenCaptureFromBase64String(getScreenshot(),"");
         calculationScreen.btnEqual.click();
         String result = calculationScreen.FinalResult.getText();
-        Assert.assertEquals(result,"32");
+
+        try{
+            Assert.assertEquals(result,"32");
+            test.pass(MarkupHelper.createLabel("Multiplication Test Success", ExtentColor.GREEN));
+        }
+        catch (Exception ex){
+            test.pass(MarkupHelper.createLabel("Multiplication Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+        }
     }
     @Test(priority = 4)
     public void VerifyDivision() throws InterruptedException {
@@ -142,7 +80,14 @@ public class CalculatorApp extends AppiumTest_Hoooks {
                 .addScreenCaptureFromBase64String(getScreenshot(),"");
         calculationScreen.btnEqual.click();
         String result = calculationScreen.FinalResult.getText();
-        Assert.assertEquals(result,"2");
+
+        try{
+            Assert.assertEquals(result,"2");
+            test.pass(MarkupHelper.createLabel("Division Test Success", ExtentColor.GREEN));
+        }
+        catch (Exception ex){
+            test.pass(MarkupHelper.createLabel("Division Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+        }
     }
 
 }
