@@ -1,4 +1,4 @@
-# Java_BDD_New
+# Appium-Calcualtor Automation
 Assignment for Calculator Mobile app automation using Appium
 TestNG is implemented , Maven for build automation
 You can find the test "src/test/java/CalculatorApp.java"
