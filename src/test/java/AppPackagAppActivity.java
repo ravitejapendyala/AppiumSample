@@ -22,6 +22,7 @@ public class AppPackagAppActivity {
         caps.setCapability("avdLaunchTimeout",180000);
         caps.setCapability("readyTimeout",180000);
         String appUrl = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ApiDemos-debug.apk";
+
         //caps.setCapability(MobileCapabilityType.APP,appUrl);
 
         caps.setCapability("appPackage","io.appium.android.apis");
