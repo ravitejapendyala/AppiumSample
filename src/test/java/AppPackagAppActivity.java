@@ -13,11 +13,10 @@ public class AppPackagAppActivity {
     public static void main(String[] args) throws MalformedURLException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
-
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         caps.setCapability(MobileCapabilityType.DEVICE_NAME,"pixel_7_pro");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
-        caps.setCapability(MobileCapabilityType.UDID,"emulator-5554");
+        //caps.setCapability(MobileCapabilityType.UDID,"emulator-5554");
         caps.setCapability("avd","Pixel_7_Pro");
         caps.setCapability("avdLaunchTimeout",180000);
         caps.setCapability("readyTimeout",180000);

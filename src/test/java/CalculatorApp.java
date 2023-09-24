@@ -29,7 +29,7 @@ public class CalculatorApp extends AppiumTest_Hoooks {
             test.pass(MarkupHelper.createLabel("Addition Test Success", ExtentColor.GREEN));
         }
         catch (Exception ex){
-            test.pass(MarkupHelper.createLabel("Addition Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+            test.fail(MarkupHelper.createLabel("Addition Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
         }
     }
     @Test(priority = 2)
@@ -47,7 +47,7 @@ public class CalculatorApp extends AppiumTest_Hoooks {
             test.pass(MarkupHelper.createLabel("Subtraction Test Success", ExtentColor.GREEN));
         }
         catch (Exception ex){
-            test.pass(MarkupHelper.createLabel("Subtraction Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+            test.fail(MarkupHelper.createLabel("Subtraction Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
         }
 
     }
@@ -67,7 +67,7 @@ public class CalculatorApp extends AppiumTest_Hoooks {
             test.pass(MarkupHelper.createLabel("Multiplication Test Success", ExtentColor.GREEN));
         }
         catch (Exception ex){
-            test.pass(MarkupHelper.createLabel("Multiplication Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+            test.fail(MarkupHelper.createLabel("Multiplication Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
         }
     }
     @Test(priority = 4)
@@ -86,7 +86,7 @@ public class CalculatorApp extends AppiumTest_Hoooks {
             test.pass(MarkupHelper.createLabel("Division Test Success", ExtentColor.GREEN));
         }
         catch (Exception ex){
-            test.pass(MarkupHelper.createLabel("Division Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
+            test.fail(MarkupHelper.createLabel("Division Test Failure with exception : "+ex.getLocalizedMessage(), ExtentColor.RED));
         }
     }
 
