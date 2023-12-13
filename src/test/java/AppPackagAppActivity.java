@@ -20,6 +20,7 @@ public class AppPackagAppActivity {
         caps.setCapability("avd","Pixel_7_Pro");
         caps.setCapability("avdLaunchTimeout",180000);
         caps.setCapability("readyTimeout",180000);
+        caps.setCapability("newCommandTimeout",300000);
         String appUrl = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ApiDemos-debug.apk";
 
         //caps.setCapability(MobileCapabilityType.APP,appUrl);
@@ -30,6 +31,7 @@ public class AppPackagAppActivity {
         URL url = new URL("http://0.0.0.0:4723");
 
         AppiumDriver driver = new AndroidDriver(url,caps);
+        System.out.println("session id: "+driver.getSessionId());
 
     }
 
