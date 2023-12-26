@@ -19,18 +19,5 @@ public class AndroidUIAutomator {
         accessibility = driver.findElements(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"android:id/text1\")")).get(1);
         System.out.println("Text by UiSelector resourceId : "+accessibility.getText());
 
-        //By element1 = AppiumBy.androidUIAutomator("");
-
-//        WebElement accessibility = driver.findElement(AppiumBy.accessibilityId("Accessibility"));
-//        System.out.println("Text by accessibilityId : "+accessibility.getText());
-//
-//        accessibility = driver.findElements(AppiumBy.id("android:id/text1")).get(1);
-//        System.out.println("Text by id : "+accessibility.getText());
-//
-//        accessibility = driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc=\"Accessibility\"]"));
-//        System.out.println("Text by xpath : "+accessibility.getText());
-//
-//        accessibility = driver.findElements(AppiumBy.className("android.widget.TextView")).get(2);
-//        System.out.println("Text by className : "+accessibility.getText());
     }
 }
