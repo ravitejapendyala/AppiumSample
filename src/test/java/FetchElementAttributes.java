@@ -1,9 +1,7 @@
-import com.google.common.collect.ImmutableMap;
+import CreateDriverSession_pack.CreateDriverSession;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 
 public class FetchElementAttributes {
     public static void main(String[] args) throws Exception {
