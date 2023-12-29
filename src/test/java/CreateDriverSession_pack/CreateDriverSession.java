@@ -41,6 +41,8 @@ public class CreateDriverSession {
 
                 caps.setCapability("appPackage","io.appium.android.apis");
                 caps.setCapability("appActivity","io.appium.android.apis.ApiDemos");
+                caps.setCapability("unlockType","pin");
+                caps.setCapability("unlockKey","1256");
                 /*
                 caps.setCapability("appPackage","com.google.android.apps.maps");
                 caps.setCapability("appActivity","com.google.android.maps.MapsActivity");
