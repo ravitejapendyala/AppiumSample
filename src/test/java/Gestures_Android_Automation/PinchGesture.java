@@ -20,18 +20,19 @@ public class PinchGesture {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        PinchGesture(driver);
+        PinchOpenGesture(driver);
         Thread.sleep(3000);
+        PinchCloseGesture(driver);
 
 
     }
 
 
-    public static void PinchGesture(AppiumDriver driver) throws InterruptedException {
+    public static void PinchOpenGesture(AppiumDriver driver) throws InterruptedException {
         Thread.sleep(3000);
         driver.findElement(AppiumBy.xpath("//android.widget.Button[@text=\"SKIP\"]")).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         ((JavascriptExecutor)driver).executeScript("mobile: pinchOpenGesture",ImmutableMap.of(
                 "left",200,
                 "top",470,
@@ -39,6 +40,21 @@ public class PinchGesture {
                 "height",600,
                 "percent",0.75
         ));
+
+
+    }
+    public static void PinchCloseGesture(AppiumDriver driver) throws InterruptedException {
+
+        System.out.println("Entered pinchCloseGesture");
+
+        ((JavascriptExecutor)driver).executeScript("mobile: pinchCloseGesture",ImmutableMap.of(
+                "left",200,
+                "top",470,
+                "width",600,
+                "height",600,
+                "percent",0.75
+        ));
+        Thread.sleep(5000);
 
 
     }
