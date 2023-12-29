@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class SwipeGesture {
     static WebDriverWait wait;
@@ -27,8 +30,10 @@ public class SwipeGesture {
         driver.findElement(views).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(Gallery)).click();
         Thread.sleep(3000);
-        SwipeByElement(driver);
+//        SwipeByElement(driver);
+        ScrollToEndHorizontally(driver,"right");
         Thread.sleep(3000);
+        ScrollToEndHorizontally(driver,"left");
 
 
     }
@@ -53,6 +58,32 @@ public class SwipeGesture {
                 "direction","left",
                 "percent",0.75
         ));
+    }
+
+    public  static void ScrollToEndHorizontally(AppiumDriver driver,String scrollDirection)
+    {
+
+        By photos = AppiumBy.accessibilityId("1. Photos");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(photos)).click();
+        By imageLocator = (AppiumBy.xpath("//*[@resource-id=\"io.appium.android.apis:id/gallery\"]/android.widget.ImageView"));
+        List<WebElement> elementList = driver.findElements(imageLocator);
+        List<String> elementListIds = elementList.stream().map(e1->((RemoteWebElement)e1).getId()).collect(Collectors.toList());
+        List<String> currentElementListIds = new ArrayList<String> (elementListIds);
+
+        do{
+            elementListIds.clear();
+            elementListIds.addAll(currentElementListIds);
+            ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+                    "left",100, "top",400, "width",700, "height",50,
+                    //"elementId",((RemoteWebElement)element).getId(),
+                    "direction",scrollDirection,
+                    "percent",1
+            ));
+            currentElementListIds.clear();
+            elementList = driver.findElements(imageLocator);
+            currentElementListIds= elementList.stream().map(e1->((RemoteWebElement)e1).getId()).collect(Collectors.toList());
+        }while (!elementListIds.containsAll(currentElementListIds));
+
     }
 
 
