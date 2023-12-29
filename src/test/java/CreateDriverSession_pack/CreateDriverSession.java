@@ -34,7 +34,7 @@ public class CreateDriverSession {
                 caps.setCapability("avdLaunchTimeout",180000);
                 caps.setCapability("readyTimeout",180000);
 
-                String andAppUrl = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ApiDemos-debug.apk";
+                //String andAppUrl = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"ApiDemos-debug.apk";
 
                 //caps.setCapability(MobileCapabilityType.APP,appUrl);
 
