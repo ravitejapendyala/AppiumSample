@@ -38,12 +38,13 @@ public class CreateDriverSession {
 
                 //caps.setCapability(MobileCapabilityType.APP,appUrl);
 
-                /*
+
                 caps.setCapability("appPackage","io.appium.android.apis");
                 caps.setCapability("appActivity","io.appium.android.apis.ApiDemos");
-                */
+                /*
                 caps.setCapability("appPackage","com.google.android.apps.maps");
                 caps.setCapability("appActivity","com.google.android.maps.MapsActivity");
+                */
                 return  new AndroidDriver(url,caps);
             case "iOS":
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone 11");
