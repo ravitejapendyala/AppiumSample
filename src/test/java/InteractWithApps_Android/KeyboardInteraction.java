@@ -31,7 +31,7 @@ public class KeyboardInteraction {
                         "elementId",((RemoteWebElement)element).getId(),
 //                "left",900, "top",2700, "width",600, "height",600,
                 "direction","up",
-                "percent",0.80
+                "percent",0.75
         ));
         Thread.sleep(3000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(TextFields)).click();
