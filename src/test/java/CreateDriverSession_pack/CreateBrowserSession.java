@@ -28,6 +28,7 @@ public class CreateBrowserSession {
         switch (platformName){
             case "Android":
                 String chromeDriver = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"chromedriver.exe";
+                String chromeDriverDir = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources";
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME,"pixel_7_pro");
                 caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
                 caps.setCapability(MobileCapabilityType.BROWSER_NAME,"Chrome");
@@ -37,7 +38,8 @@ public class CreateBrowserSession {
                 caps.setCapability("readyTimeout",180000);
                 caps.setCapability("unlockType","pin");
                 caps.setCapability("unlockKey","1256");
-                caps.setCapability("chromedriverExecutable",chromeDriver);
+//                caps.setCapability("chromedriverExecutable",chromeDriver);
+                caps.setCapability("chromedriverExecutableDir",chromeDriverDir);
                 return  new AndroidDriver(url,caps);
             case "iOS":
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone 11");
