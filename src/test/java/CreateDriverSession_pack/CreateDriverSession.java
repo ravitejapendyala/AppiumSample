@@ -27,6 +27,7 @@ public class CreateDriverSession {
 
         switch (platformName){
             case "Android":
+                String chromeDriver = System.getProperty("user.dir")+ File.separator+"src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"chromedriver.exe";
                 caps.setCapability(MobileCapabilityType.DEVICE_NAME,"pixel_7_pro");
                 caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
                 //caps.setCapability(MobileCapabilityType.UDID,"emulator-5554");
@@ -43,6 +44,7 @@ public class CreateDriverSession {
                 caps.setCapability("appActivity","io.appium.android.apis.ApiDemos");
                 caps.setCapability("unlockType","pin");
                 caps.setCapability("unlockKey","1256");
+                caps.setCapability("chromedriverExecutable",chromeDriver);
                 /*
                 caps.setCapability("appPackage","com.google.android.apps.maps");
                 caps.setCapability("appActivity","com.google.android.maps.MapsActivity");
