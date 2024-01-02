@@ -26,7 +26,7 @@ public class AutomateHybridApp {
         driver.findElement(views).click();
         WebElement element = driver.findElement(AppiumBy.id("android:id/list"));
         ((JavascriptExecutor)driver).executeScript("mobile:swipeGesture", ImmutableMap.of(
-                        "elementId",((RemoteWebElement)element).getId(),
+                "elementId",((RemoteWebElement)element).getId(),
 //                "left",900, "top",2700, "width",600, "height",600,
                 "direction","up",
                 "percent",1
@@ -41,8 +41,9 @@ public class AutomateHybridApp {
         for(String context: contextHandles){
             System.out.println(context);
         }
-
-        ((AndroidDriver)driver).context("WEBVIEW_io.appium.android.apis");
+        System.out.println("1st context is: "+contextHandles.toArray()[1].toString());
+        //((AndroidDriver)driver).context("WEBVIEW_io.appium.android.apis");
+        ((AndroidDriver)driver).context(contextHandles.toArray()[1].toString());
         Thread.sleep(3000);
         System.out.println("cssSelector Text: "+driver.findElement(By.cssSelector("body > h1")).getText());
         System.out.println("i_am_a_textbox Text: "+driver.findElement(By.id("i_am_a_textbox")).getText());
