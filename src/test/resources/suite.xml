@@ -1,7 +1,8 @@
 <suite thread-count="1" verbose="1" name="Calculator Automation">
     <test name="Calculator automation">
         <classes>
-            <class name="CalculatorApp"/>
+<!--            <class name="CalculatorApp"/>-->
+            <class name="qa.mobile.test1"/>
         </classes>
     </test>
 </suite>

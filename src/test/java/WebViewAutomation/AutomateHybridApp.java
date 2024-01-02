@@ -49,5 +49,6 @@ public class AutomateHybridApp {
         System.out.println("i_am_a_textbox Text: "+driver.findElement(By.id("i_am_a_textbox")).getText());
         ((AndroidDriver)driver).context("NATIVE_APP");
 
+        ((AndroidDriver)driver).quit();
     }
 }
