@@ -5,8 +5,8 @@
         <parameter name="deviceName" value="pixel_7_pro"></parameter>
         <classes>
 <!--            <class name="CalculatorApp"/>-->
-            <class name="com.qa.mobile.test1"/>
-<!--            <class name="com.qa.tests.LoginTests"/>-->
+<!--            <class name="com.qa.mobile.test1"/>-->
+            <class name="com.qa.tests.LoginTests"/>
         </classes>
     </test>
 </suite>
