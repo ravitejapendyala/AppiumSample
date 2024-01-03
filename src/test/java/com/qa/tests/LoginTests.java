@@ -52,7 +52,7 @@ public class LoginTests extends BaseTest {
         login.enterPassword("secret_sauce");
         productsPage =  login.ClickLogin();
         String ActualMessage = productsPage.getTitle();
-        String expecteMessage = "Products";
+        String expecteMessage = "PRODUCTS";
         System.out.println("Actuall  message : "+ActualMessage);
         Assert.assertEquals(ActualMessage,expecteMessage);
 
