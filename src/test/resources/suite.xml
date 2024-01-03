@@ -1,8 +1,12 @@
-<suite thread-count="1" verbose="1" name="Calculator Automation">
+<suite thread-count="1" verbose="1" name="Calculator Automation" parallel="false">
     <test name="Calculator automation">
+        <parameter name="platformName" value="Android"></parameter>
+        <parameter name="platformVersion" value="9.0"></parameter>
+        <parameter name="deviceName" value="pixel_7_pro"></parameter>
         <classes>
 <!--            <class name="CalculatorApp"/>-->
-            <class name="qa.mobile.test1"/>
+            <class name="com.qa.mobile.test1"/>
+<!--            <class name="com.qa.tests.LoginTests"/>-->
         </classes>
     </test>
 </suite>
