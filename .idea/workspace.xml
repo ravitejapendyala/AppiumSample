@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c1a4d260-5d58-495c-8f74-945a8238c82c" name="Changes" comment="Update testNG xml to run the tests from framework">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/tests/LoginTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2TEuLnErRPdAbvXEf7gq8wNHM4Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/1021285/OneDrive - Blue Yonder/Personal/JavaProjects/FirstAppiumProject/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/1021285/OneDrive - Blue Yonder/Personal/JavaProjects/FirstAppiumProject/src/main/resources/app&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\1021285\OneDrive - Blue Yonder\Personal\JavaProjects\FirstAppiumProject\src\main\resources\app" />
+      <recent name="C:\Users\1021285\OneDrive - Blue Yonder\Personal\JavaProjects\FirstAppiumProject\src\main\resources" />
+      <recent name="C:\Users\1021285\OneDrive - Blue Yonder\Personal\JavaProjects\FirstAppiumProject\src\test\resources" />
+      <recent name="C:\Users\1021285\OneDrive - Blue Yonder\Personal\JavaProjects\FirstAppiumProject" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\1021285\OneDrive - Blue Yonder\Personal\JavaProjects\FirstAppiumProject\src\test\resources" />
+      <recent name="C:\Users\1021285\OneDrive - Blue Yonder\Personal\JavaProjects\FirstAppiumProject\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.qa.pages" />
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qa.pages" />
+      <recent name="WebViewAutomation" />
+      <recent name="CreateDriverSession_pack" />
+      <recent name="InteractWithApps_Android" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.Suite.xml">
+    <configuration name="AutomateHybridApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebViewAutomation.AutomateHybridApp" />
+      <module name="FirstAppiumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WebViewAutomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutomateTesla" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebViewAutomation.AutomateTesla" />
+      <module name="FirstAppiumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WebViewAutomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateNewChromeDriverSession" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebViewAutomation.CreateNewChromeDriverSession" />
+      <module name="FirstAppiumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WebViewAutomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeyboardInteraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InteractWithApps_Android.KeyboardInteraction" />
+      <module name="FirstAppiumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InteractWithApps_Android.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebViewInspectionUsingAI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WebViewAutomation.WebViewInspectionUsingAI" />
+      <module name="FirstAppiumProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WebViewAutomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Suite.xml" type="TestNG">
+      <module name="FirstAppiumProject" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/suite.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AutomateTesla" />
+      <item itemvalue="Application.CreateNewChromeDriverSession" />
+      <item itemvalue="Application.AutomateHybridApp" />
+      <item itemvalue="Application.KeyboardInteraction" />
+      <item itemvalue="Application.WebViewInspectionUsingAI" />
+      <item itemvalue="TestNG.Suite.xml" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AutomateHybridApp" />
+        <item itemvalue="Application.WebViewInspectionUsingAI" />
+        <item itemvalue="Application.CreateNewChromeDriverSession" />
+        <item itemvalue="Application.AutomateTesla" />
+        <item itemvalue="Application.KeyboardInteraction" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c1a4d260-5d58-495c-8f74-945a8238c82c" name="Changes" comment="" />
+      <created>1690620511019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690620511019</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update tests to launch chrome browser &amp; invoke AppActivity on the app">
+      <created>1694012582014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694012582014</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update gitIgnore file">
+      <created>1694164005096</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694164005096</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adding logic to open simulator through capabilities">
+      <created>1694172767214</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694172767215</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding Calculator app automation logic&#10;implemented testss using TestNG&#10;Added testSuites file">
+      <created>1695468182935</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695468182935</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated tests with extent report validation">
+      <created>1695469079989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695469079989</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding README.md file">
+      <created>1695469746955</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695469746955</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update README.md file">
+      <created>1695469849526</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695469849526</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add configuration to pass the device name for testing">
+      <created>1695577335432</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695577335432</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adding locator strategies for Native element identification">
+      <created>1702468414165</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702468414166</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Finding Elements using UiAutomator (Native Technique)">
+      <created>1702472559803</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702472559803</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Different Ways of Defining Elements , common way to identify elements for both iOS &amp; Android using PageFactory &amp; annotations like AndroidFindBy,iOSXCUITFindBy">
+      <created>1703604568855</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703604568855</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ElementBasicActions like click , swipe &amp; clear fields">
+      <created>1703747704270</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703747704270</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Getting attribute values  like checked,selected,displayed">
+      <created>1703750513084</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703750513084</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adding wait conditions for element to be visible">
+      <created>1703764148301</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703764148301</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Automating Android gesture long click and updating package for CreateDriverSession class">
+      <created>1703772343708</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703772343708</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Automating Android gesture  click">
+      <created>1703772973913</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703772973913</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Automating Drag &amp; Drop gesture">
+      <created>1703828954982</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703828954982</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Automating PinchOpenGesture">
+      <created>1703833445907</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703833445907</updated>
+    </task>
+    <task id="LOCAL-00019" summary="adding PinchCloseGesture">
+      <created>1703834128510</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703834128510</updated>
+    </task>
+    <task id="LOCAL-00020" summary="adding SwipeGesture using offset">
+      <created>1703842325038</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703842325038</updated>
+    </task>
+    <task id="LOCAL-00021" summary="SwipeLeftGesture using element">
+      <created>1703844473780</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703844473780</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Swiping horizonatally from left to right &amp; viceversa">
+      <created>1703845654972</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703845654972</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Adding Scroll gesture">
+      <created>1703848578899</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703848578899</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Adding ScrollToBottom">
+      <created>1703849021206</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703849021206</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Adding tests to interact with Apps - TerminateApp">
+      <created>1703865896205</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1703865896205</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Adding tests to interact with Apps - InstallApp">
+      <created>1703866642041</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1703866642041</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Adding tests to interact with Apps - ActivateApp, runAppInBackground">
+      <created>1703867504938</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1703867504938</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Adding tests to interact with Apps - lock &amp; unlock screen">
+      <created>1703870530906</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1703870530906</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Adding tests to interact with Apps - KeyboardInteraction">
+      <created>1703872750046</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703872750046</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Update percent">
+      <created>1703874095489</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1703874095489</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update percent 2">
+      <created>1703874355248</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1703874355248</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Inspecting webview page using Appium inspector">
+      <created>1703935469779</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1703935469779</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Automate Hybrid app webview components">
+      <created>1703943883112</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1703943883112</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Create new browser session">
+      <created>1703947364012</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1703947364012</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Automate Order tesla form">
+      <created>1703950248734</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1703950248734</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Switch to context for webview different options">
+      <created>1704190842331</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1704190842331</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Adding new framework steps for Appium using TestNG steps">
+      <created>1704211319173</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1704211319174</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Adding new framework enhancements like , POM &amp; baseTest &amp; utilty classes">
+      <created>1704299121100</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1704299121100</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Update Appium version to fix the failure">
+      <created>1704299365804</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1704299365804</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Update testNG xml to run the tests from framework">
+      <created>1704299684692</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1704299684692</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Automating Android gesture  click" />
+    <MESSAGE value="Automating Drag &amp; Drop gesture" />
+    <MESSAGE value="Automating PinchOpenGesture" />
+    <MESSAGE value="adding PinchCloseGesture" />
+    <MESSAGE value="adding SwipeGesture using offset" />
+    <MESSAGE value="SwipeLeftGesture using element" />
+    <MESSAGE value="Swiping horizonatally from left to right &amp; viceversa" />
+    <MESSAGE value="Adding Scroll gesture" />
+    <MESSAGE value="Adding ScrollToBottom" />
+    <MESSAGE value="Adding tests to interact with Apps - TerminateApp" />
+    <MESSAGE value="Adding tests to interact with Apps - InstallApp" />
+    <MESSAGE value="Adding tests to interact with Apps - ActivateApp, runAppInBackground" />
+    <MESSAGE value="Adding tests to interact with Apps - lock &amp; unlock screen" />
+    <MESSAGE value="Adding tests to interact with Apps - KeyboardInteraction" />
+    <MESSAGE value="Update percent" />
+    <MESSAGE value="Update percent 2" />
+    <MESSAGE value="Inspecting webview page using Appium inspector" />
+    <MESSAGE value="Automate Hybrid app webview components" />
+    <MESSAGE value="Create new browser session" />
+    <MESSAGE value="Automate Order tesla form" />
+    <MESSAGE value="Switch to context for webview different options" />
+    <MESSAGE value="Adding new framework steps for Appium using TestNG steps" />
+    <MESSAGE value="Adding new framework enhancements like , POM &amp; baseTest &amp; utilty classes" />
+    <MESSAGE value="Update Appium version to fix the failure" />
+    <MESSAGE value="Update testNG xml to run the tests from framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update testNG xml to run the tests from framework" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/LaunchChrome.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/AppPackagAppActivity.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/InteractWithApps_Android/LockDevice.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/InteractWithApps_Android/KeyboardInteraction.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/WebViewAutomation/WebViewInspectionUsingAI.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/WebViewAutomation/AutomateTesla.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/qa/tests/LoginTests.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/BaseTest.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/BaseTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/BaseTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/BaseTest.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/BaseTest.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/BaseTest.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qa/BaseTest.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/qa/mobile/test1.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/qa/mobile/test1.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="socket.getSession()" />
+        <watch expression="chromeDriver" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
