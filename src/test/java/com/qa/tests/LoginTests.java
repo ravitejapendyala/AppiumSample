@@ -23,18 +23,6 @@ public class LoginTests extends BaseTest {
         System.out.println("\n" +"********* Starting test : "+m.getName()+ "*********" + "\n" );
 
     }
-
-    @Test(priority=2)
-    public  void invalidUserName(){
-        login.enterUserName("invalidusername");
-        login.enterPassword("secret_sauce");
-        login.ClickLogin();
-        String ActualerrorMessage = login.getErrorMessage();
-        String expecteMessage = "Username and password do not match any user in this service.";
-        System.out.println("Actuall error message : "+ActualerrorMessage);
-        Assert.assertEquals(ActualerrorMessage,expecteMessage);
-
-    }
     @Test(priority=1)
     public  void invalidPassword(){
         login.enterUserName("invalidusername");
@@ -46,6 +34,18 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(ActualerrorMessage,expecteMessage);
 
     }
+    @Test(priority=2)
+    public  void invalidUserName(){
+        login.enterUserName("invalidusername");
+        login.enterPassword("secret_sauce");
+        login.ClickLogin();
+        String ActualerrorMessage = login.getErrorMessage();
+        String expecteMessage = "Username and password do not match any user in this service.";
+        System.out.println("Actuall error message : "+ActualerrorMessage);
+        Assert.assertEquals(ActualerrorMessage,expecteMessage);
+
+    }
+
     @Test(priority=3)
     public  void LoginSuccess(){
         login.enterUserName("standard_user");
