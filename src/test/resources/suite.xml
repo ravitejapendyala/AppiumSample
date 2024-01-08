@@ -6,7 +6,11 @@
         <classes>
 <!--            <class name="CalculatorApp"/>-->
 <!--            <class name="com.qa.mobile.test1"/>-->
-            <class name="com.qa.tests.LoginTests"/>
+            <class name="com.qa.tests.LoginTests">
+            <methods>
+                <include name="invalidPassword"></include>
+            </methods>
+            </class>
         </classes>
     </test>
 </suite>
