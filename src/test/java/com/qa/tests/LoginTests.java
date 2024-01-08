@@ -9,6 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.lang.reflect.Method;
 
 public class LoginTests extends BaseTest {
@@ -36,8 +38,11 @@ public class LoginTests extends BaseTest {
         }
         catch (Exception e)
         {
-            e.printStackTrace();
-            Assert.fail(e.toString());
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            System.out.println(sw.toString());
+            Assert.fail(sw.toString());
         }
 
     }
