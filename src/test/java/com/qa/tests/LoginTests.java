@@ -25,13 +25,20 @@ public class LoginTests extends BaseTest {
     }
     @Test(priority=1)
     public  void invalidPassword(){
-        login.enterUserName("invalidusername");
-        login.enterPassword("wrongPassword");
-        login.ClickLogin();
-        String ActualerrorMessage = login.getErrorMessage();
-        String expecteMessage = "Username and password do not match any user in this service.";
-        System.out.println("Actuall error message : "+ActualerrorMessage);
-        Assert.assertEquals(ActualerrorMessage,expecteMessage);
+        try{
+            login.enterUserName("invalidusername");
+            login.enterPassword("wrongPassword");
+            login.ClickLogin();
+            String ActualerrorMessage = login.getErrorMessage();
+            String expecteMessage = "Username and password do not match any user in this service.";
+            System.out.println("Actuall error message : "+ActualerrorMessage);
+            Assert.assertEquals(ActualerrorMessage,expecteMessage);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            Assert.fail(e.toString());
+        }
 
     }
     @Test(priority=2)
