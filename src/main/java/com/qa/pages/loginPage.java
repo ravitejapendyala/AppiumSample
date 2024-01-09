@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class loginPage extends BaseTest {
 
-    @AndroidFindBy(accessibility = "test-Username1")
+    @AndroidFindBy(accessibility = "test-Username")
     private WebElement userName_txt;
     @AndroidFindBy(accessibility = "test-Password")
     private WebElement Password_txt;
