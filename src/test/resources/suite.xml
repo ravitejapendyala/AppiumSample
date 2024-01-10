@@ -9,11 +9,11 @@
         <classes>
 <!--            <class name="CalculatorApp"/>-->
 <!--            <class name="com.qa.mobile.test1"/>-->
-            <class name="com.qa.tests.LoginTests">
-            <methods>
-                <exclude name="invalidPassword"></exclude>
-            </methods>
-            </class>
+<!--            <class name="com.qa.tests.LoginTests">-->
+<!--            <methods>-->
+<!--                <exclude name="invalidPassword"></exclude>-->
+<!--            </methods>-->
+<!--            </class>-->
             <class name="com.qa.tests.ProductsTests">
             <methods>
 <!--                <include name="invalidPassword"></include>-->

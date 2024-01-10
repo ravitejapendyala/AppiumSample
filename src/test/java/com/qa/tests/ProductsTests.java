@@ -9,6 +9,7 @@ import org.checkerframework.checker.units.qual.m;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -46,8 +47,7 @@ public class ProductsTests extends BaseTest {
             }
 
         }
-        CloseApp();
-        LaunchApp();
+
 
     }
 
@@ -55,11 +55,19 @@ public class ProductsTests extends BaseTest {
     public void beforeMethod(Method m){
         login = new loginPage();
         System.out.println("\n" +"********* Starting test : "+ m.getName()+ "*********" + "\n" );
+        productsPage = login.login(loginUsers.getJSONObject("validuser").getString("username"),loginUsers.getJSONObject("validuser").getString("password"));
+    }@AfterMethod
+    public void afterMethod(Method m){
+
+        System.out.println("\n" +"********* Ending test : "+ m.getName()+ "*********" + "\n" );
+        CloseApp();
+        LaunchApp();
+
     }
     @Test(priority=1)
     public  void ValidateProductOnProductsPage(){
         SoftAssert sa = new SoftAssert();
-        productsPage = login.login(loginUsers.getJSONObject("validuser").getString("username"),loginUsers.getJSONObject("validuser").getString("password"));
+
         String slbTitle = productsPage.getSLBTitle();
         System.out.println("slbTitle is : "+slbTitle);
         String slbTitle_expected = "Sauce Labs Backpack";
@@ -76,7 +84,6 @@ public class ProductsTests extends BaseTest {
     @Test(priority=2)
     public  void ValidateProductOnProductDetailsPage(){
         SoftAssert sa = new SoftAssert();
-        productsPage = login.login(loginUsers.getJSONObject("validuser").getString("username"),loginUsers.getJSONObject("validuser").getString("password"));
         productsDetailsPage =  productsPage.ClickSLBTitle();
         String slbTitle = productsDetailsPage.getSLBTitle();
         System.out.println("slbTitle is : "+slbTitle);
