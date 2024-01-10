@@ -34,4 +34,10 @@ public class loginPage extends BaseTest {
         return getAttribute(error_info,"text");
     }
 
+    public ProductsPage login(String username,String password){
+        enterUserName(username);
+        enterPassword(password);
+        return ClickLogin();
+    }
+
 }
