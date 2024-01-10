@@ -11,7 +11,12 @@
 <!--            <class name="com.qa.mobile.test1"/>-->
             <class name="com.qa.tests.LoginTests">
             <methods>
-                <include name="invalidPassword"></include>
+                <exclude name="invalidPassword"></exclude>
+            </methods>
+            </class>
+            <class name="com.qa.tests.ProductsTests">
+            <methods>
+<!--                <include name="invalidPassword"></include>-->
             </methods>
             </class>
         </classes>

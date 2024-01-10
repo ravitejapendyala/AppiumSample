@@ -2,6 +2,7 @@ package com.qa;
 
 import com.qa.utils.TestUtils;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 //import io.appium.java_client.remote.MobileCapabilityType;
@@ -103,5 +104,12 @@ public class BaseTest {
     public  String getAttribute(WebElement element,String attribute){
         WaitForVisibility(element);
         return element.getAttribute(attribute);
+    }
+
+    public void CloseApp(){
+        ((InteractsWithApps)driver).terminateApp(prop.getProperty("androidappPackage"));
+    }
+    public void LaunchApp(){
+        ((InteractsWithApps)driver).activateApp(prop.getProperty("androidappPackage"));
     }
 }

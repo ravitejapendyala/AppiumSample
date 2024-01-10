@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,8 +25,8 @@ public class LoginTests extends BaseTest {
 
     InputStream datais;
     JSONObject loginUsers;
-    @BeforeMethod
-    public  void beforeMethod(Method m) throws IOException {
+    @BeforeClass
+    public  void beforeClass() throws IOException {
         try{
             String dataFileName = "data/loginUsers.json";
             datais=getClass().getClassLoader().getResourceAsStream(dataFileName);
@@ -43,11 +44,14 @@ public class LoginTests extends BaseTest {
             }
 
         }
+            CloseApp();
+            LaunchApp();
 
-
-
+    }
+    @BeforeMethod
+    public void beforeMethod(Method m){
         login = new loginPage();
-        System.out.println("\n" +"********* Starting test : "+m.getName()+ "*********" + "\n" );
+        System.out.println("\n" +"********* Starting test : "+ m.getName()+ "*********" + "\n" );
 
     }
     @Test(priority=1)
@@ -66,7 +70,7 @@ public class LoginTests extends BaseTest {
     @Test(priority=2)
     public  void invalidUserName(){
         login.enterUserName(loginUsers.getJSONObject("invalidUser").getString("username"));
-        login.enterUserName(loginUsers.getJSONObject("invalidUser").getString("password"));
+        login.enterPassword(loginUsers.getJSONObject("invalidUser").getString("password"));
 
         login.ClickLogin();
         String ActualerrorMessage = login.getErrorMessage();
@@ -79,7 +83,7 @@ public class LoginTests extends BaseTest {
     @Test(priority=3)
     public  void LoginSuccess(){
         login.enterUserName(loginUsers.getJSONObject("validuser").getString("username"));
-        login.enterUserName(loginUsers.getJSONObject("validuser").getString("password"));
+        login.enterPassword(loginUsers.getJSONObject("validuser").getString("password"));
         productsPage =  login.ClickLogin();
         String ActualMessage = productsPage.getTitle();
         String expecteMessage = "PRODUCTS";

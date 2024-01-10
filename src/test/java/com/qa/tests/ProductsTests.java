@@ -5,9 +5,11 @@ import com.qa.pages.ProductsDetailsPage;
 import com.qa.pages.ProductsPage;
 import com.qa.pages.SettingsPage;
 import com.qa.pages.loginPage;
+import org.checkerframework.checker.units.qual.m;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -25,8 +27,8 @@ public class ProductsTests extends BaseTest {
     JSONObject loginUsers;
     SettingsPage settingsPage;
     ProductsDetailsPage productsDetailsPage;
-    @BeforeMethod
-    public  void beforeMethod(Method m) throws IOException {
+    @BeforeClass
+    public  void beforeClass() throws IOException {
         try{
             String dataFileName = "data/loginUsers.json";
             datais=getClass().getClassLoader().getResourceAsStream(dataFileName);
@@ -44,12 +46,15 @@ public class ProductsTests extends BaseTest {
             }
 
         }
+        CloseApp();
+        LaunchApp();
 
+    }
 
-
+    @BeforeMethod
+    public void beforeMethod(Method m){
         login = new loginPage();
-        System.out.println("\n" +"********* Starting test : "+m.getName()+ "*********" + "\n" );
-
+        System.out.println("\n" +"********* Starting test : "+ m.getName()+ "*********" + "\n" );
     }
     @Test(priority=1)
     public  void ValidateProductOnProductsPage(){
@@ -80,16 +85,13 @@ public class ProductsTests extends BaseTest {
 
         String slbPrice = productsDetailsPage.getSLBPrice();
         System.out.println("slbPrice is : "+slbPrice);
-        String slbPrice_expected = "Sauce Labs Backpack";
+        String slbPrice_expected = "$29.99";
         sa.assertEquals(slbPrice,slbPrice_expected);
 
         String slbText = productsDetailsPage.getSLBText();
         System.out.println("slbText is : "+slbText);
         String slbText_expected = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
         sa.assertEquals(slbText,slbText_expected);
-
-        settingsPage =  productsPage.clickSettings();
-        login = settingsPage.clickLogout();
         sa.assertAll();
         productsPage = productsDetailsPage.ClickBackToProducts();
         settingsPage =  productsPage.clickSettings();
