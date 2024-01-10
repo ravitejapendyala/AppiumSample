@@ -90,6 +90,7 @@ public class ProductsTests extends BaseTest {
         String slbTitle_expected = "Sauce Labs Backpack";
         sa.assertEquals(slbTitle,slbTitle_expected);
 
+        productsDetailsPage.scrollToSLBPrice();
         String slbPrice = productsDetailsPage.getSLBPrice();
         System.out.println("slbPrice is : "+slbPrice);
         String slbPrice_expected = "$29.99";

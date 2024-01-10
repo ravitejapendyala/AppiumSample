@@ -1,6 +1,7 @@
 package com.qa;
 
 import com.qa.utils.TestUtils;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
@@ -111,5 +112,11 @@ public class BaseTest {
     }
     public void LaunchApp(){
         ((InteractsWithApps)driver).activateApp(prop.getProperty("androidappPackage"));
+    }
+
+    public WebElement scrollToElement() {
+        return driver.findElement(AppiumBy.androidUIAutomator(
+                "new UiScrollable(new UiSelector()" +".description(\"test-Inventory item page\")).scrollIntoView("
+                        + "new UiSelector().description(\"test-Price\"));"));
     }
 }

@@ -37,4 +37,10 @@ public ProductsPage ClickBackToProducts(){
     return new ProductsPage();
 }
 
+public ProductsDetailsPage scrollToSLBPrice(){
+
+     scrollToElement();
+     return this;
+}
+
 }

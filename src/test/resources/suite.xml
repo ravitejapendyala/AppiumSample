@@ -16,7 +16,7 @@
 <!--            </class>-->
             <class name="com.qa.tests.ProductsTests">
             <methods>
-<!--                <include name="invalidPassword"></include>-->
+                <include name="ValidateProductOnProductDetailsPage"></include>
             </methods>
             </class>
         </classes>
