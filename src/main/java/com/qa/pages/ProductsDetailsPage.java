@@ -37,9 +37,10 @@ public ProductsPage ClickBackToProducts(){
     return new ProductsPage();
 }
 
-public ProductsDetailsPage scrollToSLBPrice(){
+public ProductsDetailsPage scrollToSLBPrice() throws InterruptedException {
 
      scrollToElement();
+     //Thread.sleep(5000);
      return this;
 }
 

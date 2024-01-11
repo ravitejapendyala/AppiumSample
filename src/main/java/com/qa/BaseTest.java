@@ -7,28 +7,31 @@ import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 //import io.appium.java_client.remote.MobileCapabilityType;
+import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.v85.tethering.Tethering;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
-import java.io.File;
-import java.io.InputStream;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.Map;
 import java.util.Properties;
+import io.appium.java_client.screenrecording.CanRecordScreen;
 
 public class BaseTest {
 
     protected static AppiumDriver driver;
     protected static Properties prop;
+    protected static String dateTime;
     InputStream inputStream;
-
+    TestUtils utils;
 
     public BaseTest(){
 
@@ -42,12 +45,37 @@ public class BaseTest {
 
     }
 
+    @BeforeMethod
+    public void beforeMethod(){
+        System.out.println("super before method");
+        ((CanRecordScreen) driver).startRecordingScreen();
+    }
+    @AfterMethod
+    public void afterMethod(ITestResult result) throws FileNotFoundException {
+        System.out.println("super after method");
+        String media = ((CanRecordScreen) driver).stopRecordingScreen();
+        Map<String,String> params =  result.getTestContext().getCurrentXmlTest().getAllParameters();
+        String dir = "videos"+File.separator+params.get("platformName")+"_"+params.get("platformVersion")+"_"+params.get("deviceName")+File.separator+dateTime+File.separator+result.getTestClass().getRealClass().getSimpleName();
+    File videoDir = new File(dir);
+    if(!videoDir.exists()){
+        videoDir.mkdirs();
+    }
+        FileOutputStream stream = new FileOutputStream(videoDir+File.separator+result.getName()+".mp4");
+        try {
+            stream.write(Base64.decodeBase64(media));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Parameters({"platformName","platformVersion","deviceName"})
     @BeforeTest
     public void BeforeTest(String platformName,String platformVersion,String deviceName) throws MalformedURLException {
 
         try{
 
+            utils = new TestUtils();
+            dateTime = utils.dateTime();
             prop = new Properties();
             String propFileName = "config.properties";
             inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
@@ -116,7 +144,14 @@ public class BaseTest {
 
     public WebElement scrollToElement() {
         return driver.findElement(AppiumBy.androidUIAutomator(
-                "new UiScrollable(new UiSelector()" +".description(\"test-Inventory item page\")).scrollIntoView("
+                "new UiScrollable(new UiSelector()" +".scrollable(true)).scrollIntoView("
                         + "new UiSelector().description(\"test-Price\"));"));
+    }
+
+    public AppiumDriver getDriver(){
+        return driver;
+    }
+    public String getDateTime(){
+        return dateTime;
     }
 }

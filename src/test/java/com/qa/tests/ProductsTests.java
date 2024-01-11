@@ -82,12 +82,12 @@ public class ProductsTests extends BaseTest {
         sa.assertAll();
     }
     @Test(priority=2)
-    public  void ValidateProductOnProductDetailsPage(){
+    public  void ValidateProductOnProductDetailsPage() throws InterruptedException {
         SoftAssert sa = new SoftAssert();
         productsDetailsPage =  productsPage.ClickSLBTitle();
         String slbTitle = productsDetailsPage.getSLBTitle();
         System.out.println("slbTitle is : "+slbTitle);
-        String slbTitle_expected = "Sauce Labs Backpack";
+        String slbTitle_expected = "Sauce Labs Backpack1";
         sa.assertEquals(slbTitle,slbTitle_expected);
 
         productsDetailsPage.scrollToSLBPrice();
