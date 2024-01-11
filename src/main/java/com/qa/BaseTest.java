@@ -54,18 +54,23 @@ public class BaseTest {
     public void afterMethod(ITestResult result) throws FileNotFoundException {
         System.out.println("super after method");
         String media = ((CanRecordScreen) driver).stopRecordingScreen();
-        Map<String,String> params =  result.getTestContext().getCurrentXmlTest().getAllParameters();
-        String dir = "videos"+File.separator+params.get("platformName")+"_"+params.get("platformVersion")+"_"+params.get("deviceName")+File.separator+dateTime+File.separator+result.getTestClass().getRealClass().getSimpleName();
-    File videoDir = new File(dir);
-    if(!videoDir.exists()){
-        videoDir.mkdirs();
-    }
-        FileOutputStream stream = new FileOutputStream(videoDir+File.separator+result.getName()+".mp4");
-        try {
-            stream.write(Base64.decodeBase64(media));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+
+        if(result.getStatus()==2){
+            Map<String,String> params =  result.getTestContext().getCurrentXmlTest().getAllParameters();
+            String dir = "videos"+File.separator+params.get("platformName")+"_"+params.get("platformVersion")+"_"+params.get("deviceName")+File.separator+dateTime+File.separator+result.getTestClass().getRealClass().getSimpleName();
+            File videoDir = new File(dir);
+            if(!videoDir.exists()){
+                videoDir.mkdirs();
+            }
+            FileOutputStream stream = new FileOutputStream(videoDir+File.separator+result.getName()+".mp4");
+            try {
+                stream.write(Base64.decodeBase64(media));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
+
+
     }
 
     @Parameters({"platformName","platformVersion","deviceName"})
