@@ -55,7 +55,7 @@ public class BaseTest {
         System.out.println("super after method");
         String media = ((CanRecordScreen) driver).stopRecordingScreen();
 
-        if(result.getStatus()==2){
+        //if(result.getStatus()==2){
             Map<String,String> params =  result.getTestContext().getCurrentXmlTest().getAllParameters();
             String dir = "videos"+File.separator+params.get("platformName")+"_"+params.get("platformVersion")+"_"+params.get("deviceName")+File.separator+dateTime+File.separator+result.getTestClass().getRealClass().getSimpleName();
             File videoDir = new File(dir);
@@ -68,7 +68,7 @@ public class BaseTest {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-        }
+        //}
 
 
     }
@@ -105,8 +105,6 @@ public class BaseTest {
             dc.setCapability("unlockType","pin");
             dc.setCapability("unlockKey","1256");
             dc.setCapability("chromedriverExecutable",chromeDriver);
-
-
             URL url = new URL(prop.getProperty("appiumURL"));
             driver = new AndroidDriver(url,dc);
             String sessionId = driver.getSessionId().toString();
